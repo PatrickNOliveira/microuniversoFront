@@ -1,6 +1,13 @@
-describe('HelloWorld.vue', () => {
-  it('renders props.msg when passed', () => {
-    const msg = 'new message'
-    expect(msg).toContain('message')
+import { shallowMount } from "@vue/test-utils";
+import App from "../../src/App";
+
+/****************** Teste unitário para garantir que o app.vue está retornando uma instância vue****************/
+describe('App.vue', () => {
+  it('renders a Vue Component', () => {
+
+    const wrapper = shallowMount(App)
+
+    expect(wrapper.isVueInstance()).toBeTruthy()
+
   })
 })
