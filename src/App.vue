@@ -1,6 +1,50 @@
 <template>
-  <v-app>
+  <v-app id="inspire">
+    <v-app-bar
+      app
+      color="#007cba"
+      flat
+    >
+      <v-tabs
+        centered
+        class="ml-n9"
+        color="white"
+      >
+        <v-tab
+          to="/home"
+        >
+          Home
+        </v-tab>
+        <v-tab
+          to="/login"
+        >
+          Login
+        </v-tab>
+        <v-tab
+          to="/links"
+        >
+          Meus links
+        </v-tab>
+      </v-tabs>
+    </v-app-bar>
 
+    <v-main class="grey lighten-3">
+      <v-container>
+        <v-row justify="center">
+          <v-col
+            cols="12"
+            sm="12"
+          >
+            <v-sheet
+              min-height="70vh"
+              rounded="lg"
+            >
+             <router-view></router-view>
+            </v-sheet>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
   </v-app>
 </template>
 
@@ -15,4 +59,5 @@ export default {
 </script>
 
 <style>
+
 </style>
