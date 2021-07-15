@@ -21,10 +21,16 @@
           Login
         </v-tab>
         <v-tab
+          to="/register"
+        >
+          Registrar-se
+        </v-tab>
+        <v-tab
           to="/links"
         >
           Meus links
         </v-tab>
+
       </v-tabs>
     </v-app-bar>
 
