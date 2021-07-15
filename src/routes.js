@@ -10,7 +10,8 @@ export const routes = [
   {
     path: '/',
     component: Home,
-    alias: '/home'
+    alias: '/home',
+    name: 'home'
   },
   {
     path: '/notFound',

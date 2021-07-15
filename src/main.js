@@ -6,12 +6,14 @@ import provider from './provider';
 import { routes } from './routes';
 import vuetify from './plugins/vuetify'
 import { library } from '@fortawesome/fontawesome-svg-core'
-//import { faBars} from '@fortawesome/free-solid-svg-icons'
+import { faSignOutAlt} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 Vue.use(VueRouter);
 
-library.add()
+library.add({
+  faSignOutAlt
+})
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

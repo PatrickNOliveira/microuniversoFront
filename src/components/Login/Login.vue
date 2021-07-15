@@ -53,7 +53,7 @@ export default {
             token: r.data.token,
             user: r.data.user
           })
-          this.$router.push({name: 'home'})
+          this.$router.push({name: 'links'})
         })
         .catch((err) => {
           if (err.response.status == 401) {
