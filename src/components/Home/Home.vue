@@ -3,7 +3,6 @@
     <div class="text-center mt-6">
       <v-app-bar-title>Insira a URL a ser encurtada</v-app-bar-title>
     </div>
-    {{this.$store.state.token}}
     <v-form v-on:submit.prevent=""
             ref="form"
             v-model="valid"
