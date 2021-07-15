@@ -3,6 +3,7 @@ import Redirect from "./components/Redirect/Redirect";
 import notFound from './components/notFound/notFound'
 import Login from "./components/Login/Login";
 import Register from "./components/Login/Register";
+import Links from "./components/Links/Links";
 
 
 export const routes = [
@@ -27,6 +28,11 @@ export const routes = [
     path: '/register',
     component: Register,
     name: 'register'
+  },
+  {
+    path: '/links',
+    component: Links,
+    name: 'links'
   },
   {
     path: '/:code',
