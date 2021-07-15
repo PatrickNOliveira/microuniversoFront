@@ -1,7 +1,7 @@
 import { shallowMount } from "@vue/test-utils";
 import notFound from '../../src/components/notFound/notFound'
 
-describe('Home.vue', () => {
+describe('NotFound.vue', () => {
   let wrapper
 
   beforeAll(() => {
