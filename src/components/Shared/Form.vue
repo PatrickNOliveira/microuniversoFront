@@ -7,10 +7,10 @@
     >
       <v-alert
         dense
-        type="success"
-        v-if="successMessage"
+        :type="typeMessage"
+        v-if="message"
       >
-        {{successMessage}}
+        {{message}}
       </v-alert>
       <!-- Aqui vão entrar os inputs do formulário -->
       <slot></slot>
@@ -30,7 +30,7 @@
 <script>
 export default {
   name: "Form",
-  props:['sendFunction', 'btnText', 'successMessage'],
+  props:['sendFunction', 'btnText', 'message', 'typeMessage'],
   data(){
     return {
       valid: true

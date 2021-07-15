@@ -19,18 +19,21 @@
         <v-tab
           to="/login"
           key="login"
+          v-if="!usuarioLogado()"
         >
           Login
         </v-tab>
         <v-tab
           to="/register"
           key="register"
+          v-if="!usuarioLogado()"
         >
           Registrar-se
         </v-tab>
         <v-tab
           to="/links"
           key="links"
+          v-if="usuarioLogado()"
         >
           Meus links
         </v-tab>
@@ -63,6 +66,14 @@ export default {
   name: 'app',
   data () {
     return {
+    }
+  },
+  mounted() {
+    console.log(this.usuarioLogado())
+  },
+  methods:{
+    usuarioLogado() {
+      return Boolean(this.$store.state.token);
     }
   }
 }
