@@ -3,6 +3,7 @@
    btn-text="Cadastrar-se"
    :send-function="register"
    :success-message="successMessage"
+   id="register"
  >
    <v-text-field
      v-model="user.firstName"

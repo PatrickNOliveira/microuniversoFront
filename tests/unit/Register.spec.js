@@ -10,7 +10,7 @@ describe('Register.vue', () => {
 
   /************ Teste para garantir que existe um objeto com o id notFound dentro do component ******************/
   it('should be renders a element with register id', () => {
-    const div = wrapper.find('#Register')
+    const div = wrapper.find('#register')
 
     expect(div.exists()).toBeTruthy()
   })
@@ -18,7 +18,13 @@ describe('Register.vue', () => {
   /************ Teste para garantir que o component está renderizando os dados corretos ******************/
   it('should be renders a correct data', () => {
     //Variáveis esperadas no component
-    const expectData = ["user", "nameRules", "emailRules"]
+    const expectData = ["user",
+      "successMessage",
+      "nameRules",
+      "emailRules",
+      "passwordRules",
+      "confirmPasswordRules"
+    ]
 
     expect(Object.keys(wrapper.vm.$data)).toMatchObject(expectData)
   })
