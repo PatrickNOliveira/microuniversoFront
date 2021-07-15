@@ -2,8 +2,9 @@
  <app-form
    btn-text="Cadastrar-se"
    :send-function="register"
-   :success-message="successMessage"
    id="register"
+   type-message="success"
+   :message="successMessage"
  >
    <v-text-field
      v-model="user.firstName"
