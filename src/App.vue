@@ -38,6 +38,15 @@
           Meus links
         </v-tab>
 
+        <v-tab
+          to="/user/edit"
+          key="editUser"
+          v-if="usuarioLogado()"
+        >
+          Editar usuário
+        </v-tab>
+
+
       </v-tabs>
 
       <v-avatar

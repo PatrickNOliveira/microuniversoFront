@@ -1,5 +1,5 @@
 import { shallowMount } from "@vue/test-utils";
-import Register from '../../src/components/Login/Register'
+import Register from '../../src/components/User/Register'
 
 describe('Register.vue', () => {
   let wrapper
