@@ -19,11 +19,21 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
 
-
 const router = new VueRouter({
   routes,
   mode: 'history'
 });
+
+
+//Antes de cada rota
+router.beforeEach((to, from, next) => {
+  //Verifica se a rota é publica ou se o token está setado
+  if (!to.meta.public && !provider.state.token){
+    //Se o token não estiver setado, impede que acesse a rota e manda para a tela inicial
+    return next({path: '/home'})
+  }
+  next()
+})
 
 Vue.prototype.$http = http;
 

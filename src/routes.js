@@ -13,22 +13,34 @@ export const routes = [
     path: '/',
     component: Home,
     alias: '/home',
-    name: 'home'
+    name: 'home',
+    meta: {
+      public: true
+    }
   },
   {
     path: '/notFound',
     component: notFound,
-    name: 'notFound'
+    name: 'notFound',
+    meta: {
+      public: true
+    }
   },
   {
     path: '/login',
     component: Login,
-    name: 'login'
+    name: 'login',
+    meta: {
+      public: true
+    }
   },
   {
     path: '/register',
     component: Register,
-    name: 'register'
+    name: 'register',
+    meta: {
+      public: true
+    }
   },
   {
     path: '/links',
@@ -42,6 +54,10 @@ export const routes = [
   },
   {
     path: '/:code',
-    component: Redirect
-  },
+    component: Redirect,
+    meta: {
+      public: true
+    }
+  }
+
 ];
