@@ -17,9 +17,12 @@ describe('Home.vue', () => {
   /*********************** Teste para garantir que todas as variáveis foram setadas ***********************/
   it('url data should be start empty', () => {
     //Variáveis esperadas no component
-    const expectData = ["url", "urlRules", "valid"]
-    expect(Object.keys(wrapper.vm.$data)).toBe(expectData)
+    const expectData = ["valid", "url", "urlRules"]
+
+    expect(Object.keys(wrapper.vm.$data)).toMatchObject(expectData)
   })
+
+
 
   /**************************** Teste para garantir que o data URL inicia vazio ***********************/
   it('url data should be start empty', () => {

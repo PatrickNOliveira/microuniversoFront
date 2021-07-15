@@ -1,6 +1,6 @@
 import Home from "./components/Home/Home";
 import Redirect from "./components/Redirect/Redirect";
-import notFound from './components/404/notFound'
+import notFound from './components/notFound/notFound'
 
 
 export const routes = [
@@ -15,7 +15,7 @@ export const routes = [
     component: Redirect
   },
   {
-    path: '/404',
+    path: '/notFound',
     component: notFound,
     name: 'notFound'
   }

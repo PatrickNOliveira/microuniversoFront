@@ -7,7 +7,7 @@ describe('App.vue', () => {
 
     const wrapper = shallowMount(App)
 
-    expect(wrapper.isVueInstance()).toBeTruthy()
+    expect(wrapper.find('#id')).toBeTruthy()
 
   })
 })
