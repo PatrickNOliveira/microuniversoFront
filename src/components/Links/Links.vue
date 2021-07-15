@@ -4,11 +4,11 @@
     :search="search"
     :items="urls"
     search-label="Buscar (Destino ou Url encurtada)"
+    id="links"
   >
     <template slot="item" scope="props">
       <tr>
-        <td>{{props.item.username}}</td>
-        <td>{{props.item.email}}</td>
+
       </tr>
     </template>
   </app-table>
