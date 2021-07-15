@@ -12,6 +12,7 @@
       >
         <v-tab
           to="/home"
+          key="home"
         >
           Home
         </v-tab>
@@ -66,4 +67,7 @@ export default {
 
 <style>
 
+body {
+  overflow: hidden;
+}
 </style>
