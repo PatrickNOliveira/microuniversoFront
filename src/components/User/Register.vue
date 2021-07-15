@@ -6,6 +6,9 @@
    type-message="success"
    :msg="successMessage"
    :user="user"
+   :checkbox="true"
+   :password="true"
+   :clear-form="true"
  >
  </app-form>
 </template>
@@ -28,7 +31,7 @@ export default {
     register(){
       this.$http.post('/register', this.user).then((r) => {
         if (r.data) {
-          this.successMessage = 'Cadastrado com sucesso !'
+          this.successMessage = 'Editado com sucesso !'
         }
       })
     }

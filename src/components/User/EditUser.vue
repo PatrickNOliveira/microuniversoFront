@@ -1,62 +1,47 @@
 <template>
   <app-form
     btn-text="Editar usuário"
-    :send-function="register"
+    :send-function="editUser"
     id="register"
     type-message="success"
-    :message="successMessage"
+    :msg="successMessage"
+    :user="user"
+    :checkbox="false"
+    :password="false"
+    :clear-form="false"
   >
-    <v-text-field
-      v-model="user.firstName"
-      :rules="nameRules"
-      label="Nome"
-      required
-    ></v-text-field>
-
-    <v-text-field
-      v-model="user.lastName"
-      :rules="nameRules"
-      label="Sobrenome"
-      required
-    ></v-text-field>
-
-    <v-text-field
-      v-model="user.email"
-      :rules="emailRules"
-      label="E-mail"
-      required
-    ></v-text-field>
-
-    <v-text-field
-      v-model="user.password"
-      :rules="passwordRules"
-      label="Senha"
-      type="password"
-      required
-    ></v-text-field>
-
-    <v-text-field
-      v-model="user.confirmPassword"
-      :rules="confirmPasswordRules"
-      label="Confirmar senha"
-      type="password"
-      required
-    ></v-text-field>
   </app-form>
 </template>
 
 <script>
-import Form from "../Shared/Form";
+import FormUser from "./Shared/FormUser";
 
 export default {
   name: "EditUser",
   components:{
-    'app-form': Form
+    'app-form': FormUser
   },
-  data(){
+  data() {
     return {
-      user:{}
+      user: {},
+      successMessage: null,
     }
+  },
+  methods:{
+    editUser(){
+      console.log(this.user)
+      this.$http.put('/user', this.user).then((r) => {
+        if (r.data) {
+          this.successMessage = 'Editado com sucesso !'
+        }
+      }).catch(e => {
+        console.log(e.response)
+      })
+    }
+  },
+  mounted() {
+    this.user = this.$store.state.user
+    delete this.user.password
   }
 }
 </script>

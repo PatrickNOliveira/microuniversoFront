@@ -1,10 +1,11 @@
 <template>
   <app-form
-    btn-text="Cadastrar-se"
+    :btn-text="btnText"
     :send-function="sendFunction"
     id="register"
     type-message="success"
     :message="msg"
+    :clear-form="clearForm"
   >
     <v-text-field
       v-model="user.firstName"
@@ -32,6 +33,7 @@
       :rules="passwordRules"
       label="Senha"
       type="password"
+      v-if="password"
       required
     ></v-text-field>
 
@@ -40,6 +42,7 @@
       :rules="confirmPasswordRules"
       label="Confirmar senha"
       type="password"
+      v-if="password"
       required
     ></v-text-field>
 
@@ -61,7 +64,7 @@ export default {
   components:{
     'app-form': Form
   },
-  props:['sendFunction', 'user', 'msg', 'checkbox'],
+  props:['sendFunction', 'user', 'msg', 'checkbox', 'btnText', 'password', 'clearForm'],
   data(){
     return{
       nameRules: [

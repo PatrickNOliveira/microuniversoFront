@@ -30,7 +30,7 @@
 <script>
 export default {
   name: "Form",
-  props:['sendFunction', 'btnText', 'message', 'typeMessage'],
+  props:['sendFunction', 'btnText', 'message', 'typeMessage', 'clearForm'],
   data(){
     return {
       valid: true
@@ -43,7 +43,9 @@ export default {
     sendForm(){
       if (this.validate()){
         this.sendFunction()
-        this.$refs.form.reset()
+        if (this.clearForm) {
+          this.$refs.form.reset()
+        }
       }
     }
   }

@@ -18,12 +18,9 @@ describe('Register.vue', () => {
   /************ Teste para garantir que o component está renderizando os dados corretos ******************/
   it('should be renders a correct data', () => {
     //Variáveis esperadas no component
-    const expectData = ["user",
+    const expectData = [
+      "user",
       "successMessage",
-      "nameRules",
-      "emailRules",
-      "passwordRules",
-      "confirmPasswordRules"
     ]
 
     expect(Object.keys(wrapper.vm.$data)).toMatchObject(expectData)
