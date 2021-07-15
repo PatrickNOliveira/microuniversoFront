@@ -14,4 +14,16 @@ describe('Home.vue', () => {
     expect(wrapper.isVueInstance()).toBeTruthy()
 
   })
+
+  it('contains a url input', () => {
+
+    expect(wrapper.find('input')).toBeTruthy()
+
+  })
+
+  it('url field should start empty', () => {
+
+    expect(wrapper.$vm.data).toBe('')
+
+  })
 })
