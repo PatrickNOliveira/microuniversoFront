@@ -58,6 +58,7 @@
     "moduleNameMapper": {
       "^@/(.*)$": "<rootDir>/src/$1"
     },
+    "setupFiles": ["<rootDir>/tests/unit/index.js"],
     "preset": "@vue/cli-plugin-unit-jest/presets/no-babel"
   },
   "license": "MIT"

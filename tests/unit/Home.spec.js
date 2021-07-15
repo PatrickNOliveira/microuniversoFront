@@ -1,7 +1,6 @@
 import { shallowMount } from "@vue/test-utils";
 import Home from "../../src/components/Home/Home.vue";
 
-/****************** Teste unitário para garantir que o app.vue está retornando uma instância vue****************/
 describe('Home.vue', () => {
   let wrapper
 
@@ -9,21 +8,22 @@ describe('Home.vue', () => {
     wrapper =  shallowMount(Home)
   })
 
-  it('renders a Vue Component', () => {
-
-    expect(wrapper.isVueInstance()).toBeTruthy()
-
-  })
-
-  it('contains a url input', () => {
+  /********************** Teste para garantir que existe o input de url no home.vue **********************/
+  it('renders a url input', () => {
 
     expect(wrapper.find('input')).toBeTruthy()
-
   })
 
-  it('url field should start empty', () => {
-
-    expect(wrapper.$vm.data).toBe('')
-
+  /*********************** Teste para garantir que todas as variáveis foram setadas ***********************/
+  it('url data should be start empty', () => {
+    //Variáveis esperadas no component
+    const expectData = ["url", "urlRules", "valid"]
+    expect(Object.keys(wrapper.vm.$data)).toBe(expectData)
   })
+
+  /**************************** Teste para garantir que o data URL inicia vazio ***********************/
+  it('url data should be start empty', () => {
+    expect(wrapper.vm.$data.url).toBe("")
+  })
+
 })
