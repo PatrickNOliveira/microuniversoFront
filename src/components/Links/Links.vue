@@ -38,7 +38,7 @@ export default {
   },
   mounted() {
     this.$http.get('url').then((r) => {
-      console.log(r.data)
+      this.urls = r.data
     })
   }
 }
