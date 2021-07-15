@@ -74,7 +74,7 @@ export default {
 
         }).then((r) => {
 
-          console.log(r.data)
+          this.url = 'localhost:8080/'+r.data.tinyUrl
 
         })
       }
