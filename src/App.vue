@@ -18,16 +18,19 @@
         </v-tab>
         <v-tab
           to="/login"
+          key="login"
         >
           Login
         </v-tab>
         <v-tab
           to="/register"
+          key="register"
         >
           Registrar-se
         </v-tab>
         <v-tab
           to="/links"
+          key="links"
         >
           Meus links
         </v-tab>
