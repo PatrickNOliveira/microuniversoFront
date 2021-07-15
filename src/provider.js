@@ -15,7 +15,7 @@ const mutations = {
     state.token = token;
   },
   LOGOUT_USER(state){
-    state.userId = null;
+    state.user = null;
     state.token = null;
     sessionStorage.clear();
   }

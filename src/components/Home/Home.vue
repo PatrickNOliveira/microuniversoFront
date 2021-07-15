@@ -3,6 +3,7 @@
     <div class="text-center mt-6">
       <v-app-bar-title>Insira a URL a ser encurtada</v-app-bar-title>
     </div>
+    {{this.$store.state.token}}
     <v-form v-on:submit.prevent=""
             ref="form"
             v-model="valid"
@@ -71,11 +72,17 @@ export default {
         this.$http.post('url', {
 
           destiny: this.url,
-          tinyUrl: this.randomString()
+          tinyUrl: this.randomString(),
+          user_id: this.$store.state.token?this.$store.state.user.id:null
 
         }).then((r) => {
 
-          this.url = 'localhost:8080/'+r.data.tinyUrl
+          //Pega a url atual
+          let url = window.location.href
+          //Elimina o sufixo /home
+          url = url = url.split('/home');
+          //Monta a url para o usuário com a url do sistema + o código tinyUrl gerado
+          this.url = `${url[0]+'/'+r.data.tinyUrl}`
 
         })
       }
