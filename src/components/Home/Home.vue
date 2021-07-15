@@ -21,6 +21,7 @@
         class="col-md-12"
         elevation="2"
         outlined
+        id="sendButton"
         @click="shortUrl"
       >
         Encurtar
