@@ -69,8 +69,4 @@ export default {
 </script>
 
 <style>
-
-body {
-  overflow: hidden;
-}
 </style>
