@@ -4,7 +4,6 @@ import http from "./http";
 import VueRouter from 'vue-router';
 import provider from './provider';
 import { routes } from './routes';
-import moment from 'moment'
 import vuetify from './plugins/vuetify'
 import { library } from '@fortawesome/fontawesome-svg-core'
 //import { faBars} from '@fortawesome/free-solid-svg-icons'

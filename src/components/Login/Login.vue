@@ -4,6 +4,7 @@
     :send-function="logIn"
     type-message="error"
     :message="msg"
+    id="login"
   >
     <v-text-field
       v-model="user.email"

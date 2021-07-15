@@ -68,9 +68,6 @@ export default {
     return {
     }
   },
-  mounted() {
-    console.log(this.usuarioLogado())
-  },
   methods:{
     usuarioLogado() {
       return Boolean(this.$store.state.token);

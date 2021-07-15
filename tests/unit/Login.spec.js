@@ -18,7 +18,7 @@ describe('Login.vue', () => {
   /************ Teste para garantir que o component está renderizando os dados corretos ******************/
   it('should be renders a correct data', () => {
     //Variáveis esperadas no component
-    const expectData = ["user", "emailRules", "passwordRules"]
+    const expectData = ["user", "msg", "emailRules", "passwordRules"]
 
     expect(Object.keys(wrapper.vm.$data)).toMatchObject(expectData)
   })
@@ -28,14 +28,6 @@ describe('Login.vue', () => {
 
     expect(wrapper.vm.$data.user).toMatchObject({})
 
-  })
-
-  /************ Teste para garantir que o component está renderizando os métodos corretos ******************/
-  it('should be renders a correct data', () => {
-    //Variáveis esperadas no component
-    const expectData = ["user", "emailRules", "passwordRules"]
-
-    expect(Object.keys(wrapper.vm.methods)).toMatchObject(expectData)
   })
 
 })
