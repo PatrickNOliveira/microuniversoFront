@@ -20,7 +20,8 @@ describe('Register.vue', () => {
     //Variáveis esperadas no component
     const expectData = [
       "user",
-      "successMessage",
+      "message",
+      "type_message"
     ]
 
     expect(Object.keys(wrapper.vm.$data)).toMatchObject(expectData)
