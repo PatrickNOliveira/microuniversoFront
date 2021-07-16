@@ -6,6 +6,7 @@
     item-key="name"
     class="elevation-0"
     :search="search"
+    id="table"
   >
     <template v-slot:top>
       <v-card-title class="mb-0 pb-0">
