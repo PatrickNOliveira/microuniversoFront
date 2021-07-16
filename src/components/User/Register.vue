@@ -3,8 +3,8 @@
    btn-text="Cadastrar-se"
    :send-function="register"
    id="register"
-   type-message="success"
-   :msg="successMessage"
+   :type-message="type_message"
+   :msg="message"
    :user="user"
    :checkbox="true"
    :password="true"
@@ -24,14 +24,22 @@ export default {
   data() {
     return {
       user: {},
-      successMessage: null,
+      message: null,
+      type_message: ''
     }
   },
   methods:{
     register(){
       this.$http.post('/register', this.user).then((r) => {
         if (r.data) {
-          this.successMessage = 'Editado com sucesso !'
+          this.type_message = 'success'
+          this.message = 'Editado com sucesso !'
+        }
+      }).catch(e => {
+        if (e.response.data == "Validation error"){
+          this.type_message = 'error'
+          this.message = 'E-mail já está em uso !'
+
         }
       })
     }

@@ -3,7 +3,7 @@
     :btn-text="btnText"
     :send-function="sendFunction"
     id="register"
-    type-message="success"
+    :type-message="typeMessage"
     :message="msg"
     :clear-form="clearForm"
   >
@@ -64,7 +64,7 @@ export default {
   components:{
     'app-form': Form
   },
-  props:['sendFunction', 'user', 'msg', 'checkbox', 'btnText', 'password', 'clearForm'],
+  props:['sendFunction', 'user', 'msg', 'checkbox', 'btnText', 'password', 'clearForm', 'typeMessage'],
   data(){
     return{
       nameRules: [
